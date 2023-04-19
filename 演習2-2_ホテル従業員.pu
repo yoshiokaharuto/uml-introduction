@@ -1,0 +1,10 @@
+
+@startuml 演習2-2_ホテル従業員.p
+
+    left to right direction
+
+    actor 経営者
+    actor ホテル従業員
+     経営者--|> ホテル従業員
+    
+@enduml

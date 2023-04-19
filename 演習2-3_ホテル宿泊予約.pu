@@ -1,0 +1,12 @@
+
+@startuml 演習2-3_ホテル宿泊予約.pu
+
+    actor 利用者
+    rectangle ホテル宿泊予約 {
+        usecase 予約する
+        usecase ログインする
+    }
+
+    利用者 --> 予約する
+   ログインする <. 予約する : <<include>>
+@enduml
