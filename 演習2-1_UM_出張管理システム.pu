@@ -5,8 +5,7 @@ left to right direction
     actor 申請者 #DDDDDD;line:black;line.bold;
     actor 承認者 #DDDDDD;line:black;line.bold;
     actor 経理担当者 #DDDDDD;line:black;line.bold;
-
-    rectangle 出張申請システム{
+     rectangle 出張申請システム{
         usecase 出張申請を登録する
         usecase 出張申請を提出する
         usecase 出張申請を承認する
