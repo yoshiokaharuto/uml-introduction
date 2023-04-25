@@ -21,7 +21,7 @@
     利用者 --> input
     input   .> ログインする: <<include>>
     input   .> キャンペーン価格: <<include>>
-    キャンペーン .> input: <<extend>>
+    キャンペーン .> input: <<extend>> 
     予約の集計 <-- 管理者
     空室状況を入力する  <-- ホテル従業員
     ログインする <. 予約の集計:  <<include>>
