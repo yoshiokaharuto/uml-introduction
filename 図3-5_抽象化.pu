@@ -18,4 +18,6 @@ class Cat {
 }
 Animal <|-down- Dog
 Animal <|-down- Cat
+
+hide Animal circle
 @enduml
