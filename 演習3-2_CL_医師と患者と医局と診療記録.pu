@@ -1,0 +1,16 @@
+@startuml 演習3-2_CL_医師と患者と医局と診療記録.pu
+
+     left to right direction
+
+    class 医師{}
+    class 患者{}
+    class 医局{
+        - 内科
+        - 外科
+        - 小児科
+    }
+
+    医師 "1" -- "*" 患者:診察する >
+    医師  "*" --"1"    医局
+
+@enduml

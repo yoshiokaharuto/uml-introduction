@@ -1,0 +1,25 @@
+@startuml 演習3-4_オブジェクト図.pu
+
+    left to right direction
+
+    object "<u>車1:車 </u>" as car {
+        車種 = トヨタ プリウス
+    }
+    object "<u>タイヤ1: タイヤ</u>" as tire1{
+        種類 = ブリヂストン
+    }
+    object "<u>タイヤ2: ダイヤ</u>" as tire2{
+        種類 = ブリヂストン
+    }
+    object "<u>タイヤ3: ダイヤ</u>" as tire3{
+        種類 = ブリヂストン   
+    }
+    object "<u>タイヤ4: ダイヤ</u>" as tire4{
+        種類 = ブリヂストン
+    } 
+
+    tire1 -- car
+    car -- tire2
+    tire3 -- car 
+    car -- tire4
+@enduml
