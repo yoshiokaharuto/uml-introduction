@@ -27,16 +27,5 @@
      input .> キャンペーン価格: <<include>>
     キャンペーン .> input: <<extend>>   
     会員登録する ..> input : <<extend>>
-    input ..> ログインする : <<include>>
-
-    ' 空室状況の閲覧 <-- 利用者
-    ' 会員登録する <. ログインする: <<include>>
-    ' 利用者 --> input
-    ' input   .> ログインする: <<include>>
-    ' input   .> キャンペーン価格: <<include>>
-    ' キャンペーン .> input: <<extend>> 
-    ' 予約の集計 <-- 管理者
-    ' 空室状況を入力する  <-- ホテル従業員
-    ' ログインする <. 予約の集計:  <<include>>
-    ' ログインする <. 空室状況を入力する: <<include>>
+    input ..> ログインする : <<include>>    
 @enduml
