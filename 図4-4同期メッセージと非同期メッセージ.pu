@@ -1,0 +1,32 @@
+@startuml 図4-4 同期メッセージと非同期メッセージ
+ hide footbox
+ 
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+participant ":検索画面" as seach
+participant ":検索コントローラ" as control
+
+activate seach
+seach ->> control: 検索情報取得（）
+note right  : 非同期メッセージ
+
+seach -> control: 検索情報取得（）
+note right  : 同期メッセージ
+
+seach <<- control: 返り値（）
+note right  : 非同期メッセージの返り値
+
+seach <- control: 返り値（）
+note right  : 同期メッセージ返り値
+
+deactivate control
+
+@enduml
+
+
+
+
+
+
+
+
+
