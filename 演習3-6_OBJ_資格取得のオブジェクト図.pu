@@ -1,0 +1,20 @@
+@startuml 演習3-6_OBJ_資格取得のオブジェクト図
+
+    left to right direction
+
+    object "<u>社員１:受験者 </u>" as employee1{
+        名前 = 高橋洋平さん
+    }
+    object "<u>社員2:受験者 </u>" as employee2{
+        名前 = 樋口正之さん
+    } 
+    object "<u>資格１:資格 </u>" as qual1{
+        名称 = 情報処理技術者試験
+    }
+    object "<u>資格2:資格 </u>" as qual2{
+        名称 = LinuC試験Level1
+    }
+    qual1 -- employee1
+    qual1 -- employee2
+    qual2 -- employee1
+@enduml

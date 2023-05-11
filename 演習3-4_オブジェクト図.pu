@@ -3,18 +3,23 @@
     left to right direction
 
     object "<u>車1:車 </u>" as car {
+        ID = 1
         車種 = トヨタ プリウス
     }
     object "<u>タイヤ1: タイヤ</u>" as tire1{
+        車ID = 1
         種類 = ブリヂストン
     }
     object "<u>タイヤ2: ダイヤ</u>" as tire2{
+        車ID = 1
         種類 = ブリヂストン
     }
     object "<u>タイヤ3: ダイヤ</u>" as tire3{
+        車ID = 1
         種類 = ブリヂストン   
     }
     object "<u>タイヤ4: ダイヤ</u>" as tire4{
+        車ID = 1
         種類 = ブリヂストン
     } 
 

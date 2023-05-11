@@ -1,2 +1,15 @@
 @startuml 演習3-4_クラス図.pu
+
+    left to right direction
+
+    class 車{
+        ID:int
+        車種:String
+    }
+    class タイヤ{
+        種類:String
+        車ID:int
+    }
+
+    車 "1"--"4" タイヤ
 @enduml
