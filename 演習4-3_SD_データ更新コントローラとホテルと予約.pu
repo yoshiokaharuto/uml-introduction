@@ -1,0 +1,21 @@
+@startuml 演習4-3_SD_データ更新コントローラとホテルと予約
+
+    hide footbox
+    autonumber /'メッセージに自動で番号を降る '/
+    skinparam style strictuml /' 厳密なUMLに準拠する '/
+
+    participant "<u>controller:データ更新コントローラ</u>" as controller
+    participant "<u>hotel:ホテル</u>" as hotel
+
+     activate controller
+         controller -> hotel: 予約操作()
+        activate hotel
+            create "<u>:予約</u>" as reserve
+            hotel -> reserve:作成()
+            hotel -> hotel: 予約登録操作()
+            
+            activate hotel
+        deactivate hotel
+     deactivate controller
+
+@enduml
