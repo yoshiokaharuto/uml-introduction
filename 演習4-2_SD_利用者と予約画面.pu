@@ -1,4 +1,5 @@
 @startuml 演習4-2_SD_利用者と予約画面
+
     hide footbox
     autonumber /'メッセージに自動で番号を降る '/
     skinparam style strictuml /' 厳密なUMLに準拠する '/
