@@ -9,24 +9,22 @@
     participant "<u>:商品</u>" as goods        <<entity>>
 
     activate employee
-       employee -> register 
+       employee -> register :商品情報を確認する()
        activate register
             activate goods
-            register -> goods: 商品情報確認()
-            register  <<- goods: 商品情報取得
+               register -> goods: 商品情報確認()
+               register  <<- goods: 商品情報取得
             deactivate goods
             register -> register: 商品情報表示()
             activate register
+            deactivate register
        deactivate register
 
 
-       employee -> register
-            create "<u>:注文</u>" as entry      <<entity>>
-            register --> entry:
-            activate entry
-            deactivate entry
-            
-    deactivate employee
-
+      employee -> register: 商品情報を確認する()
+      activate register
+          create "<u>:注文</u>" as order       <<entity>>
+          register --> order : <<create>>
+'     deactivate employee
 
 @enduml
