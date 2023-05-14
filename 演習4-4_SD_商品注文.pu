@@ -21,7 +21,7 @@
        deactivate register
 
 
-      employee -> register: 商品情報を確認する()
+      employee -> register: 商品登録()
       activate register
           create "<u>:注文</u>" as order       <<entity>>
           register --> order : <<create>>
