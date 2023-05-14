@@ -1,0 +1,32 @@
+@startuml 演習4-4_SD_商品注文
+
+    hide footbox
+    ' autonumber /'メッセージに自動で番号を降る '/
+    skinparam style strictuml /' 厳密なUMLに準拠する '/
+
+    actor "<u>:受注係</u>" as employee
+    participant "<u>:注文登録画面</u>" as register <<boundary>>
+    participant "<u>:商品</u>" as goods        <<entity>>
+
+    activate employee
+       employee -> register 
+       activate register
+            activate goods
+            register -> goods: 商品情報確認()
+            register  <<- goods: 商品情報取得
+            deactivate goods
+            register -> register: 商品情報表示()
+            activate register
+       deactivate register
+
+
+       employee -> register
+            create "<u>:注文</u>" as entry      <<entity>>
+            register --> entry:
+            activate entry
+            deactivate entry
+            
+    deactivate employee
+
+
+@enduml
