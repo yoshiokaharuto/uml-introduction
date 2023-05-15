@@ -1,0 +1,32 @@
+@startuml 演習4-5_SD_商品情報検索
+
+    hide footbox
+    ' autonumber /'メッセージに自動で番号を降る '/
+    skinparam style strictuml /' 厳密なUMLに準拠する '/
+
+    actor "<u>:会員</u>" as member
+    participant "<u>:商品検索画面</u>" as search <<boundary>>
+    participant "<u>:商品検索コントローラ</u>" as search2 <<control>>
+
+    activate member
+        member -> search
+        activate search
+            search -> search2
+            activate search2
+                create "<u>:商品</u>" as goods
+                search2 --> goods: <<create>>
+
+                    loop 商品カテゴリ数
+                    create "<u>:商品カテゴリ</u>" as category
+                    search2 -->> category :  <<create>>
+                    search2 ->  goods : 商品カテゴリ()
+                        activate goods
+                        deactivate goods
+                    end loop 
+                search <<-- search2 :商品情報
+            deactivate search2
+                search -> search : 商品情報表示(商品情報)
+                activate search
+        deactivate search
+    deactivate member
+@enduml
