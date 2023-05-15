@@ -13,11 +13,11 @@
         activate search
             search -> search2
             activate search2
-                create "<u>:商品</u>" as goods
+                create "<u>:商品</u>" as goods <<entity>>
                 search2 --> goods: <<create>>
 
                     loop 商品カテゴリ数
-                    create "<u>:商品カテゴリ</u>" as category
+                    create "<u>:商品カテゴリ</u>" as category <<entity>>
                     search2 -->> category :  <<create>>
                     search2 ->  goods : 商品カテゴリ()
                         activate goods
