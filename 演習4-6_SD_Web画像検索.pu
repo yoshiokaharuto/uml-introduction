@@ -20,7 +20,7 @@
                     image -> image : 画像ファイルを探す
                     web <- image : 検索結果
                 deactivate image
-                browser <- web : 画像を閲覧状態にする
+                browser <- web : 画像を閲覧可能状態にする
             deactivate web
             user <- browser : 画像ファイル
         deactivate browser
