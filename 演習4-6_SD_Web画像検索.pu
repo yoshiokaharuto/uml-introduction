@@ -6,7 +6,24 @@
 
     actor "<u>:ユーザ</u>" as user
 
-    participant "<u>:ユーザー</u>" as
-    participant "<u>:Webサーバ</u>"
+    participant "<u>:ブラウザ</u>" as browser
+    participant "<u>:Webサーバ</u>" as web
+    participant "<u>:画像サーバ</u>" as image
+
+    activate user
+        user -> browser : リンクボタンを押す
+        activate browser
+            browser -> web: 画像のファイル名
+            activate web
+                web -> image: 画像ファイル検索を伝える
+                activate image
+                    image -> image : 画像ファイルを探す
+                    web <- image : 画像を閲覧状態にする
+                deactivate image
+                browser <- web : 画像ファイルを再生
+            deactivate web
+            user <- browser : 画像ファイル
+        deactivate browser
+    deactivate user
 
 @enduml
