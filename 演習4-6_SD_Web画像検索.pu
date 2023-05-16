@@ -1,0 +1,12 @@
+@startuml 演習4-6_SD_Web画像検索
+
+    hide footbox
+    ' autonumber /'メッセージに自動で番号を降る '/
+    skinparam style strictuml /' 厳密なUMLに準拠する '/
+
+    actor "<u>:ユーザ</u>" as user
+
+    participant "<u>:ユーザー</u>" as
+    participant "<u>:Webサーバ</u>"
+
+@enduml
