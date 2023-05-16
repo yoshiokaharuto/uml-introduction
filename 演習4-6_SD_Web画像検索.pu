@@ -18,9 +18,9 @@
                 web -> image: 画像ファイル検索を伝える
                 activate image
                     image -> image : 画像ファイルを探す
-                    web <- image : 画像を閲覧状態にする
+                    web <- image : 検索結果
                 deactivate image
-                browser <- web : 画像ファイルを再生
+                browser <- web : 画像を閲覧状態にする
             deactivate web
             user <- browser : 画像ファイル
         deactivate browser
