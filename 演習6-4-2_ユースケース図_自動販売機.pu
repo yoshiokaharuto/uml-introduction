@@ -1,0 +1,23 @@
+@startuml 演習6-4-2_ユースケース図_自動販売機
+
+    left to right direction
+    
+    actor 利用者
+    actor ベンダー
+
+    rectangle 自動販売機 {
+        usecase お金を回収する
+        usecase ドリンクを運ぶ
+        usecase (<u>ドリンクが半分以下になる</u>\n拡張点\n補充する)as refill
+        usecase お金を入れる
+        usecase ボタンを押す
+        usecase ドリンクを取る
+    }
+    利用者 --> お金を入れる
+    利用者 --> ボタンを押す
+    利用者 --> ドリンクを取る
+    refill <. ドリンクを運ぶ: <<extend>>
+    refill <-- ベンダー
+    お金を回収する <-- ベンダー
+
+@enduml
