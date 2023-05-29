@@ -17,5 +17,5 @@
                 activate bender
             deactivate button 
         deactivate fee
-        bender -> user:ドリンク
+        bender --> user:ドリンク
 @enduml
