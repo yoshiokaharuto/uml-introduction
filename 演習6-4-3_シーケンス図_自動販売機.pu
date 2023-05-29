@@ -1,0 +1,21 @@
+@startuml 演習6-4-3_シーケンス図_自動販売機
+    hide footbox
+    autonumber /'メッセージに自動で番号を降る '/
+    skinparam style strictuml /' 厳密なUMLに準拠する '/
+
+    actor "<u>:利用者</u>" as user
+    participant "<u>:料金装置</u>" as fee
+    participant "<u>:ボタン</u>" as button 
+    participant "<u>:ベンダー装置</u>" as bender
+
+    activate user
+        user -> fee: お金を入れる
+        activate fee
+            fee -> button: ボタンを押す
+            activate button
+                button -> bender: 対応したドリンクが出てくる
+                activate bender
+            deactivate button 
+        deactivate fee
+        bender -> user:ドリンク
+@enduml
