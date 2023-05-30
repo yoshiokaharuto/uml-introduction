@@ -1,0 +1,7 @@
+@startuml 演習6-4-5_ステートマシン図_自動販売機
+
+    left to right direction
+
+    [*] --> 料金投入待ち
+    
+@enduml
