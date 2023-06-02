@@ -1,0 +1,20 @@
+@startuml 演習6-5-3_ステートマシン図_ライントレーサー
+
+    left to right direction   
+
+
+    state f <<fork>>
+    state j <<join>>
+    state 進む{
+        state 右旋回
+        state 左旋回
+    }
+    電源SWON --> f: 電源を入れる
+    f --> 右旋回
+    f --> 左旋回
+    右旋回 --> j
+    左旋回 --> j
+    j --> 電源SWOFF: 電源を切る
+
+
+@enduml
