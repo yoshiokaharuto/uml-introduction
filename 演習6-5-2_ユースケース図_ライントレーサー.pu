@@ -1,0 +1,17 @@
+@startuml 演習6-5-2_ユースケース図_ライントレーサー
+    ' left to right direction
+
+    actor ユーザー
+    actor 右モータ
+    actor 左モータ
+
+
+    rectangle ライントレーサー{
+        usecase 黒いライン上を進む as go
+    }
+
+    ユーザー -up-> go
+    右モータ -up-> go
+    左モータ -up-> go
+
+@enduml
